@@ -24,6 +24,15 @@ class App extends React.Component {
       });
   }
 
+  postFriend = friend => {
+    axios
+      .post("http://localhost:5000/friends", friend)
+      .then(response => 
+        console.log(response))
+      .catch(err => 
+        console.log(err));
+  };
+
   render() {
     return (
       <div className="App">

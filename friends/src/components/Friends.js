@@ -1,4 +1,6 @@
 import React from 'react'
+import './Friends.css';
+import PostFriend from './PostFriend';
 
 function Friends(props) {
   return (
@@ -11,6 +13,7 @@ function Friends(props) {
           <p>Email: {friend.email}</p>
         </div>
       ))}
+      <PostFriend postFriend={props.postFriend}/>
     </div>
   )
 }
