@@ -6,6 +6,10 @@ p {
     color: 	#42647f;
 }
 
+.name {
+  font-size: 1.6em;
+}
+
 input {
     display: flex;
     flex-direction: column;

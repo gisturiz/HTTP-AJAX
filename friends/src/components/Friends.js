@@ -8,7 +8,7 @@ function Friends(props) {
       <h1>Friends List</h1>
       {props.friends.map(friend => (
         <div>
-          <p><strong>Name: {friend.name}</strong></p>
+          <p className="name"><strong>Name: {friend.name}</strong></p>
           <p>Age: {friend.age}</p>
           <p>Email: {friend.email}</p>
         </div>

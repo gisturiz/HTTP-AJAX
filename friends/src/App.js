@@ -16,9 +16,7 @@ class App extends React.Component {
   componentDidMount() {
     axios
       .get("http://localhost:5000/friends")
-      .then(res => {
-        console.log(res);
-        this.setState({ friends: res.data });
+      .then(res => {this.setState({ friends: res.data });
       })
       .catch(err => {
         console.log(err);
@@ -28,11 +26,9 @@ class App extends React.Component {
   postFriend = friend => {
     axios
       .post("http://localhost:5000/friends", friend)
-      .then(response => 
-        console.log(response))
+      .then(response => this.setState({ friends: response.data }))
       .catch(err => 
         console.log(err));
-        window.location.reload();
   };
 
   render() {
