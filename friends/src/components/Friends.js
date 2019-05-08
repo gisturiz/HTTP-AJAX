@@ -13,7 +13,6 @@ function Friends(props) {
           <p>Email: {friend.email}</p>
         </div>
       ))}
-      <PostFriend postFriend={props.postFriend}/>
     </div>
   )
 }

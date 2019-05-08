@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Friends from './components/Friends';
 import { Route } from 'react-router-dom';
+import PostFriend from './components/PostFriend';
 
 class App extends React.Component {
   constructor() {
@@ -31,6 +32,7 @@ class App extends React.Component {
         console.log(response))
       .catch(err => 
         console.log(err));
+        window.location.reload();
   };
 
   render() {
@@ -42,10 +44,11 @@ class App extends React.Component {
           render={props => (
             <Friends
               {...props}
-              friends={this.state.friends}
+              friends={this.state.friends} 
          />
          )}
         />
+        <PostFriend postFriend={this.postFriend}/>
       </div>
     );
   }
